@@ -38,7 +38,7 @@ export TableExits=`az storage table exists --name "${TableName}" --account-name 
 echo "table exists \"${TableName}\" account-name \"${AZ_StorageAccount}\" result \"${TableExits}\""
 
 echo "create table \"${TableName}\" account-name \"${AZ_StorageAccount}\""
-az storage table create --name "${TableName}" --account-name "${AZ_StorageAccount}" --account-key "${AZ_StorageAccount_Key}"
+az storage table create --name "${TableName}" --account-name "${AZ_StorageAccount}" --account-key "${AZ_StorageAccount_Key}" >/dev/null
 [ "$?" == "1" ] && echo "Error during create table \"${TableName}\" in \"${AZ_StorageAccount}\"" >&2 && exit 1 
 
 export TableExits=`az storage table exists --name "${TableName}" --account-name "${AZ_StorageAccount}" --account-key "${AZ_StorageAccount_Key}" | grep "exists" | sed 's/\( \|"exists":\)//g'`
