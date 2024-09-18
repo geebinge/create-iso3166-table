@@ -27,11 +27,10 @@ cd ./create-iso3166-table/scripts
 chmod 775 load_iso3166.sh
 ```
 
-Download from https://unstats.un.org/unsd/methodology/m49/overview/ the CSV verison and
-adopt the ${ISO3166_File} and all other varibles in ./create-iso3166-table/scripts/iso3166.inc
+Download from https://unstats.un.org/unsd/methodology/m49/overview/ the CSV verison and adopt the ${ISO3166_File} and all other varibles in ./create-iso3166-table/scripts/iso3166.inc
 
 ```
-`./load_iso3166.sh`
+./load_iso3166.sh
 ```
 
 After you start the scropt you will get asked to use a web browser to open the page https://microsoft.com/devicelogin and enter the code you get asked to authenticate.
